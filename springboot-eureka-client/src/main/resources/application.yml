@@ -1,0 +1,13 @@
+server:
+  port: 8890
+spring:
+  application:
+    name: eureka-client${server.port}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+
+#日志配置
+logging:
+  config: classpath:log4j2.xml
